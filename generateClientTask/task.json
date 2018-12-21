@@ -1,0 +1,62 @@
+{
+    "id": "A863C9A6-D4BB-4CAC-AFFA-4A794265D322",
+    "name": "Oas.CSharp.Client.Generator.Task",
+    "friendlyName": "C# Client SDK Generator",
+    "description": "Generate C# Client SDK from OAS",
+    "helpMarkDown": "",
+    "category": "Azure Artifacts",
+    "author": "Will Axtell",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 8
+    },
+    "instanceNameFormat": "Generate C# Client SDK",
+    "inputs": [
+        {
+            "name": "input",
+            "type": "string",
+            "label": "OAS File",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "File that contains the Open API Specification"
+        },
+        {
+            "name": "output",
+            "type": "string",
+            "label": "Output File",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The output file path"
+        },
+        {
+            "name": "classname",
+            "type": "string",
+            "label": "Class Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The class name of the generated client"
+        },
+        {
+            "name": "namespace",
+            "type": "string",
+            "label": "Namespace",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The namespace of the generated classes"
+        },
+        {
+            "name": "additionalparams",
+            "type": "string",
+            "label": "Additional Parameters",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Provide optional parameters to NSwag"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
